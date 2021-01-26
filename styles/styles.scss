@@ -107,7 +107,6 @@ $purple-color: #bb84db;
         background-color: rgba($color: #f8f9fa, $alpha: 0.8);
 
         &:focus {
-          transition: 0.2s;
           border: 2px solid $purple-color;
         }
       }
@@ -115,6 +114,35 @@ $purple-color: #bb84db;
       &:hover {
         transform: scale(1.1);
       }
+    }
+  }
+}
+
+.search-bar {
+  text-align: center;
+  form {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    label {
+      font-size: 2rem;
+      font-weight: 700;
+      align-self: flex-start;
+      margin-bottom: 2rem;
+    }
+    input {
+      padding: 2rem;
+      font-size: 2rem;
+      outline: none;
+      width: 50rem;
+      height: 4rem;
+      border-radius: 0.5rem;
+      border: 1px solid $purple-color;
+    }
+
+    button {
+      font-size: 3rem;
     }
   }
 }
