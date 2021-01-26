@@ -25,26 +25,29 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-top: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px;
 }
 
 .header nav .logo {
   text-transform: uppercase;
   font-size: 3rem;
-  display: inline-block;
   letter-spacing: -2px;
+  border-bottom: 2px solid #1d1c1c;
+  height: 4rem;
+  cursor: pointer;
 }
 
 .header nav .btn {
   text-decoration: none;
-  color: #000;
+  color: #1d1c1c;
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 900;
   padding: 1.5rem 2rem;
-  background-color: #28a745;
+  background-color: #ffc8dd;
   border-radius: 100px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -53,22 +56,79 @@
 .header nav .btn:hover {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 5px rgba(29, 28, 28, 0.2);
+          box-shadow: 0 3px 5px rgba(29, 28, 28, 0.2);
 }
 
 .header nav .btn:active {
   -webkit-transform: translateY(0.5px);
           transform: translateY(0.5px);
+  -webkit-box-shadow: 0 2px 5px rgba(29, 28, 28, 0.2);
+          box-shadow: 0 2px 5px rgba(29, 28, 28, 0.2);
 }
 
-.header .header-text h2 {
-  font-size: 4rem;
+.header .showcase {
+  width: 66%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 75% 25%;
+      grid-template-columns: 75% 25%;
+}
+
+.header .showcase .header-text {
+  line-height: 4rem;
+}
+
+.header .showcase .header-text h2 {
+  font-size: 5rem;
   font-weight: 900;
 }
 
-.header .header-text p {
-  font-size: 2rem;
+.header .showcase .header-text .watch-text {
+  color: #bb84db;
+}
+
+.header .showcase .header-text p {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.header .showcase form {
+  text-align: end;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 30px;
+  -webkit-box-shadow: -10px 10px 25px rgba(29, 28, 28, 0.2);
+          box-shadow: -10px 10px 25px rgba(29, 28, 28, 0.2);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header .showcase form h2 {
+  font-size: 2.8rem;
   font-weight: 700;
+}
+
+.header .showcase form input {
+  outline: none;
+  border-style: solid;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 100px;
+  border: 1px solid #bb84db;
+  background-color: rgba(248, 249, 250, 0.8);
+}
+
+.header .showcase form input:focus {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: 2px solid #bb84db;
+}
+
+.header .showcase form:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=styles.css.map */

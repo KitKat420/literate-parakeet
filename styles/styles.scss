@@ -9,9 +9,9 @@
   }
 }
 
-$black-color: #000;
-$green-color: #28a745;
-$darl-color: #343a40;
+$black-color: rgb(29, 28, 28);
+$pink-color: #ffc8dd;
+$purple-color: #bb84db;
 
 .header {
   margin: 20px;
@@ -25,14 +25,16 @@ $darl-color: #343a40;
 
   nav {
     display: flex;
-    justify-content: space-around;
-    padding-top: 100px;
+    justify-content: space-between;
+    padding: 50px;
 
     .logo {
       text-transform: uppercase;
       font-size: 3rem;
-      display: inline-block;
       letter-spacing: -2px;
+      border-bottom: 2px solid $black-color;
+      height: 4rem;
+      cursor: pointer;
     }
 
     .btn {
@@ -42,7 +44,7 @@ $darl-color: #343a40;
       font-size: 1.5rem;
       font-weight: 900;
       padding: 1.5rem 2rem;
-      background-color: $green-color;
+      background-color: $pink-color;
       border-radius: 100px;
       transition: all 0.3s;
 
@@ -53,19 +55,66 @@ $darl-color: #343a40;
 
       &:active {
         transform: translateY(0.5px);
+        box-shadow: 0 2px 5px rgba($color: $black-color, $alpha: 0.2);
       }
     }
   }
 
-  .header-text {
-    h2 {
-      font-size: 4rem;
-      font-weight: 900;
+  .showcase {
+    width: 66%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 75% 25%;
+
+    .header-text {
+      line-height: 4rem;
+      h2 {
+        font-size: 5rem;
+        font-weight: 900;
+      }
+
+      .watch-text {
+        color: $purple-color;
+      }
+
+      p {
+        font-size: 2.5rem;
+        font-weight: 400;
+      }
     }
 
-    p {
-      font-size: 2rem;
-      font-weight: 700;
+    form {
+      text-align: end;
+      background-color: #fff;
+      border-radius: 1rem;
+      padding: 30px;
+      box-shadow: -10px 10px 25px rgba($color: $black-color, $alpha: 0.2);
+      transition: all 0.3s;
+
+      h2 {
+        font-size: 2.8rem;
+        font-weight: 700;
+      }
+
+      input {
+        outline: none;
+        border-style: solid;
+        font-size: 2rem;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 100px;
+        border: 1px solid $purple-color;
+        background-color: rgba($color: #f8f9fa, $alpha: 0.8);
+
+        &:focus {
+          transition: 0.2s;
+          border: 2px solid $purple-color;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
