@@ -32,12 +32,24 @@
           <p>Modernized Anime Website Built Just For You.</p>
         </div>
 
-        <form>
+        <form action="/" method="POST">
           <h2>Subscribe For Anime News</h2>
           <input name="fNAME" placeholder="First Name" type="text" />
           <input name="email" placeholder="Email" type="email" />
         </form>
       </div>
     </header>
+
+    <div class="search-bar">
+      <form action="/" method="POST">
+        <label for="anime">Try out the Anime Search API</label>
+        <input
+          id="anime"
+          name="animeSearch"
+          placeholder="search for an anime, e.g Naruto"
+        />
+        <button type="submit">Go</button>
+      </form>
+    </div>
   </body>
 </html>
